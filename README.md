@@ -50,6 +50,10 @@ const shortId = mikroid.create(8);
 const alphaId = mikroid.create(12, 'alphanumeric');
 // => "a7Bz9X3KpL2q"
 
+// Generate a hex ID in lowercase
+const alphaId = mikroid.create(16, 'hex', true);
+// => "69ae1f9de761cebf"
+
 // Generate a lowercase-only ID
 const lowerId = mikroid.create(10, 'extended', true);
 // => "b3k_p7~r9w"
