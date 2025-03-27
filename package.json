@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "author": "Mikael Vesavuori",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "id",
+    "id-generator",
+    "security"
+  ],
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "repository": {
