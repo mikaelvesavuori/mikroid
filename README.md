@@ -165,7 +165,7 @@ create(length?: number, style?: IdStyle, onlyLowerCase?: boolean, urlSafe?: bool
 Generates a new ID with the specified parameters.
 
 - `length` (optional): Length of the generated ID. Default: 16
-- `style` (optional): Style of the ID ('alphanumeric' or 'extended'). Default: 'extended'
+- `style` (optional): Style of the ID ('alphanumeric', 'hex', or 'extended'). Default: 'extended'
 - `onlyLowerCase` (optional): Whether to use only lowercase letters. Default: false
 - `urlSafe` (optional): Whether to use only URL-safe characters. Default: true
 
