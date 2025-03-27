@@ -1,0 +1,51 @@
+{
+  "name": "mikroid",
+  "description": "A lightweight, customizable ID generator with zero dependencies.",
+  "version": "1.0.0",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "keywords": [],
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelvesavuori/mikroid"
+  },
+  "bugs": {
+    "url": "https://github.com/mikaelvesavuori/mikroid/issues"
+  },
+  "homepage": "https://github.com/mikaelvesavuori/mikroid",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    }
+  },
+  "files": [
+    "/lib",
+    "!/lib/**/*.map",
+    "!/tests"
+  ],
+  "scripts": {
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "npx vitest run --coverage",
+    "test:watch": "npx vitest --watch",
+    "build": "npm run clean && npm run build:tsup",
+    "build:tsup": "npm run clean && tsup src --format esm,cjs --dts && mv dist/* lib",
+    "clean": "rm -rf lib && rm -rf dist && mkdir lib",
+    "lint": "npx @biomejs/biome check --write ./src",
+    "package": "npm pack",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1",
+    "@types/node": "latest",
+    "@vitest/coverage-v8": "2",
+    "esbuild": "latest",
+    "husky": "9",
+    "tsup": "8",
+    "typescript": "5",
+    "vitest": "2"
+  }
+}
